@@ -21,6 +21,8 @@ window.I18N.ca = {
     "epfl-loomos": "Robots Segway Loomo preparats per a les proves (Lausana, 2020).",
     "pulsar-stand": "Estand de PULSAR HRI: actuadors, motors i ecosistema.",
     "cvc-egolf-pirineo": "Prototip autònom Volkswagen e-Golf del CVC al Pirineu (2022).",
+    "cvc-egolf-fornet": "L'e-Golf autònom del CVC al costat del Refugi del Fornet, al Pirineu.",
+    "cvc-egolf-circuito": "L'e-Golf preparat per a les proves en circuit tancat.",
     "cvc-egolf-night": "Proves nocturnes de l'e-Golf autònom (2022).",
     "fs-driverless-2019": "Amb el monoplaça Driverless UPC (BCN e-Motorsport) a la Formula Student (2019).",
     "fs-driverless-run": "El monoplaça a la pista durant la competició Formula Student (2019).",
@@ -233,7 +235,7 @@ window.I18N.ca = {
     confsShort: "Congressos", confsTitle: "Comunicacions en congressos",
     fmt: { oral: "Presentació oral", poster: "Pòster" }, chair: "Moderador de sessió",
     projShort: "Projectes", projTitle: "Projectes de recerca",
-    projLabels: { ref: "Referència", funder: "Finançament", budget: "Import", pi: "IP / direcció", period: "Període", role: "El meu rol", ongoing: "En curs", done: "Finalitzat", video: "Mira el vídeo de demostració" },
+    projLabels: { ref: "Referència", funder: "Finançament", budget: "Import", pi: "IP / direcció", period: "Període", role: "El meu rol", ongoing: "En curs", done: "Finalitzat", video: "Documental complet (3Cat)", trailer: "Tràiler del documental (3Cat)" },
     projects: {
       dacs: { role: "Investigador", contrib: "Recerca en control i supervisió basats en dades per a sistemes crítics: diagnòstic de fallades, anàlisi d'abastabilitat, predicció amb incertesa i supervisió formal de la seguretat." },
       cdti: { role: "Senior Robotics Research Engineer (2025–2026)", contrib: "Desenvolupament i validació d'arquitectures de control en llaç tancat LQI/PI per a l'estabilització i el seguiment d'alta precisió d'un sistema robòtic, amb validació experimental i informes tècnics." },
@@ -293,6 +295,7 @@ window.I18N.ca = {
       { k: "bcn", role: "Chief of Estimation & Control", area: "Vehicles autònoms", org: "BCN e-Motorsport (Formula Student Driverless)", place: "Barcelona, Espanya", period: "09/2018 – 08/2019", platform: "Monoplaça elèctric de competició sense conductor", bullets: ["Direcció de l'àrea d'estimació i control d'un monoplaça elèctric sense conductor, en un equip multidisciplinari de 7 persones", "Una experiència pràctica i d'organització, propera al funcionament d'una empresa, que em va ser molt útil en les feines posteriors"], formLink: "Mira el projecte complet a Formació" }
     ],
     videoLabel: "Mira el vídeo de demostració",
+    linkLabels: { doc: "Documental complet (3Cat)", trailer: "Tràiler del documental (3Cat)", yt: "Mira el vídeo a YouTube" },
     eduShort: "Formació", eduTitle: "Formació acadèmica",
     edu: [
       { y: "2022 – 2025", t: "Doctorat en Automàtica, Robòtica i Visió", w: "UPC-CSIC, Barcelona", p: "Tesi: <em>Functional Safety for Highly Automated Vehicles</em>. Excel·lent Cum Laude, menció internacional i industrial. Estades a la TUM (Munic i Heilbronn)." },

@@ -21,6 +21,8 @@ window.I18N.en = {
     "epfl-loomos": "Segway Loomo robots ready for testing (Lausanne, 2020).",
     "pulsar-stand": "PULSAR HRI stand: actuators, motors and ecosystem.",
     "cvc-egolf-pirineo": "CVC's Volkswagen e-Golf autonomous prototype in the Pyrenees (2022).",
+    "cvc-egolf-fornet": "CVC's autonomous e-Golf next to the Refugi del Fornet, in the Pyrenees.",
+    "cvc-egolf-circuito": "The e-Golf ready for closed-track testing.",
     "cvc-egolf-night": "Night-time tests of the autonomous e-Golf (2022).",
     "fs-driverless-2019": "With the Driverless UPC car (BCN e-Motorsport) at Formula Student (2019).",
     "fs-driverless-run": "The car on track during the Formula Student competition (2019).",
@@ -233,7 +235,7 @@ window.I18N.en = {
     confsShort: "Conferences", confsTitle: "Conference presentations",
     fmt: { oral: "Oral presentation", poster: "Poster" }, chair: "Session chair",
     projShort: "Projects", projTitle: "Research projects",
-    projLabels: { ref: "Reference", funder: "Funding body", budget: "Funding", pi: "PI / supervision", period: "Period", role: "My role", ongoing: "Ongoing", done: "Completed", video: "Watch the demo video" },
+    projLabels: { ref: "Reference", funder: "Funding body", budget: "Funding", pi: "PI / supervision", period: "Period", role: "My role", ongoing: "Ongoing", done: "Completed", video: "Full documentary (3Cat)", trailer: "Documentary trailer (3Cat)" },
     projects: {
       dacs: { role: "Researcher", contrib: "Research on data-driven control and supervision of safety-critical systems: fault diagnosis, reachability analysis, uncertainty-aware prediction and formal safety supervision." },
       cdti: { role: "Senior Robotics Research Engineer (2025–2026)", contrib: "Development and validation of LQI/PI closed-loop control architectures for high-precision robotic stabilisation and tracking, including experimental validation and technical reporting." },
@@ -293,6 +295,7 @@ window.I18N.en = {
       { k: "bcn", role: "Chief of Estimation & Control", area: "Autonomous vehicles", org: "BCN e-Motorsport (Formula Student Driverless)", place: "Barcelona, Spain", period: "09/2018 – 08/2019", platform: "Driverless electric race car", bullets: ["Led the estimation and control area of a driverless electric race car, in a cross-functional team of 7", "Hands-on and organisational experience, close to how a company works, that proved very useful in my later jobs"], formLink: "See the full project under Education" }
     ],
     videoLabel: "Watch the demo video",
+    linkLabels: { doc: "Full documentary (3Cat)", trailer: "Documentary trailer (3Cat)", yt: "Watch on YouTube" },
     eduShort: "Education", eduTitle: "Education",
     edu: [
       { y: "2022 – 2025", t: "Ph.D. in Automatic Control, Robotics and Vision", w: "UPC-CSIC, Barcelona", p: "Thesis: <em>Functional Safety for Highly Automated Vehicles</em>. Excellent Cum Laude, International and Industrial mentions. Research stays at TUM (Munich and Heilbronn)." },

@@ -395,10 +395,10 @@ footer{padding:40px 0;text-align:center;font-size:.85rem;color:var(--muted);bord
 <footer id="foot"></footer>
 <div id="lb" role="dialog" aria-modal="true"><button aria-label="×">×</button><img alt=""><p></p></div>
 
-<script src="data.js?v=20261124b"></script>
-<script src="i18n/es.js?v=20261124b"></script>
-<script src="i18n/en.js?v=20261124b"></script>
-<script src="i18n/ca.js?v=20261124b"></script>
+<script src="data.js?v=20261124c"></script>
+<script src="i18n/es.js?v=20261124c"></script>
+<script src="i18n/en.js?v=20261124c"></script>
+<script src="i18n/ca.js?v=20261124c"></script>
 <script>
 (function(){
 var D=window.DATA, VIEWS=['inicio','docencia','investigacion','profesional','formacion'];
@@ -419,6 +419,7 @@ function mfig(id,cls){var m=D.media[id]||{},cap=(T.media&&T.media[id])||'',src='
   return '<figure class="mfig reveal'+(cls?' '+cls:'')+'" data-m="'+id+'"><div class="mm">'+inner+'</div><figcaption>'+cap+'</figcaption></figure>'}
 function atags(arr){return '<div class="atags">'+arr.map(function(a){return '<span class="atag" style="--ac:'+COL[a]+';--as:'+SOFT[a]+'">'+T.ui.areas[a]+'</span>'}).join('')+'</div>'}
 function heroPhoto(id,kind){var cap=(T.media&&T.media[id])||'';return '<figure class="hphoto '+kind+'" data-m="'+id+'"><img src="media/'+id+'.jpg" alt="'+cap.replace(/"/g,'&quot;')+'"><figcaption>'+cap+'</figcaption></figure>'}
+function expLinks(k,style){var ls=(D.exp[k]||{}).links||[];return ls.map(function(l){return '<p style="'+style+'"><a href="'+l[1]+'" target="_blank" rel="noopener" style="font-weight:600">▶ '+T.prof.linkLabels[l[0]]+' ↗</a></p>'}).join('')}
 function stats(arr){return '<div class="stats">'+arr.map(function(s){return '<div class="stat"><b>'+s[0]+'</b><span>'+s[1]+'</span></div>'}).join('')+'</div>'}
 
 /* ---------- HOME ---------- */
@@ -519,7 +520,7 @@ function vResearch(){
   h+=sec('r-proyectos',R.projShort,'<div class="s-head reveal"><h2>'+R.projTitle+'</h2></div><div class="projects">'+D.projects.map(function(p,i){var t=R.projects[p.k];
     return '<details class="proj reveal"'+(i==0?' open':'')+'><summary><h3>'+p.name+'</h3><span class="rl">'+t.role+' · '+p.period+'</span><span class="st'+(p.ongoing?' on':'')+'">'+(p.ongoing?L.ongoing:L.done)+'</span></summary><div class="body"><dl>'+
     '<dt>'+L.ref+'</dt><dd>'+p.ref+'</dd><dt>'+L.funder+'</dt><dd>'+p.funder+'</dd>'+(p.budget?'<dt>'+L.budget+'</dt><dd>'+p.budget+'</dd>':'')+'<dt>'+L.pi+'</dt><dd>'+p.pi+'</dd><dt>'+L.role+'</dt><dd>'+t.role+'</dd></dl><p>'+t.contrib+'</p>'+
-    (p.video?'<p style="margin-top:10px"><a href="'+D.demoVideo+'" target="_blank" rel="noopener">▶ '+L.video+' ↗</a></p>':'')+'</div></details>'}).join('')+'</div>',true);
+    (p.video?'<div class="gallery" style="margin-top:14px">'+D.tdaMedia.map(function(id){return mfig(id)}).join('')+'</div><p style="margin-top:12px"><a href="'+D.demoVideo+'" target="_blank" rel="noopener" style="font-weight:600">▶ '+L.video+' ↗</a> &nbsp;·&nbsp; <a href="'+D.trailer+'" target="_blank" rel="noopener" style="font-weight:600">▶ '+L.trailer+' ↗</a></p>':'')+'</div></details>'}).join('')+'</div>',true);
   h+=sec('r-transfer',R.transferShort,'<div class="s-head reveal"><h2>'+R.transferTitle+'</h2></div><div class="cards c3">'+R.transfer.map(function(t){return '<div class="card reveal"><span class="tag">'+t.tag+'</span><h3 style="font-size:1.1rem;line-height:1.35">'+t.title+'</h3><p class="note" style="margin-top:2px">'+t.meta+'</p><p class="m">'+t.p+'</p>'+(t.link?'<a href="'+t.link+'" target="_blank" rel="noopener" style="font-weight:600;font-size:.9rem">'+t.linkLabel+' ↗</a>':'')+'</div>'}).join('')+'</div>'+
     '<h3 class="reveal" style="margin-top:40px">'+R.serviceTitle+'</h3><div class="chips reveal">'+R.service.map(function(s){return '<span class="chip">'+s+'</span>'}).join('')+'</div>',false);
   return h;
@@ -532,11 +533,11 @@ function vProf(){
   h+=sec('p-exp',P.expShort,'<div class="s-head reveal"><h2>'+P.expTitle+'</h2></div><div class="xp">'+P.exp.map(function(x){var pr=x.period.split(' – ');
     return '<div class="xpi reveal"><div class="when">'+x.period+'<small>'+x.place+'</small></div><div class="xpc">'+atags((D.exp[x.k]||{}).areas||[])+'<h3 style="margin-top:8px">'+x.role+'</h3><div class="note" style="margin:0 0 2px">'+x.area+'</div><div class="org">'+x.org+'</div>'+
     '<ul class="'+(x.bullets.length>2?'hide':'')+'">'+x.bullets.map(function(b){return '<li>'+b+'</li>'}).join('')+'</ul>'+(x.bullets.length>2?'<button class="more">'+T.ui.more+' ↓</button>':'')+
-    (x.platform?'<div><span class="plat">⚙ '+x.platform+'</span></div>':'')+(x.formLink?'<p style="margin:10px 0 0;font-size:.9rem"><a href="#formacion" style="font-weight:600">'+x.formLink+' →</a></p>':'')+((D.exp[x.k]||{}).video?'<p style="margin:10px 0 0;font-size:.9rem"><a href="'+D.exp[x.k].video+'" target="_blank" rel="noopener">▶ '+P.videoLabel+' ↗</a></p>':'')+'</div></div>'}).join('')+'</div>',true);
+    (x.platform?'<div><span class="plat">⚙ '+x.platform+'</span></div>':'')+(x.formLink?'<p style="margin:10px 0 0;font-size:.9rem"><a href="#formacion" style="font-weight:600">'+x.formLink+' →</a></p>':'')+expLinks(x.k,'margin:8px 0 0;font-size:.9rem')+'</div></div>'}).join('')+'</div>',true);
   var plats=P.exp.filter(function(x){return D.exp[x.k]&&D.exp[x.k].media.length});
   h+=sec('p-plat',P.platformsShort,'<div class="s-head reveal"><h2>'+P.platformsTitle+'</h2></div><p class="note reveal" style="margin-top:-12px">'+P.platformsNote+'</p><div class="platg">'+plats.map(function(x){var ms=D.exp[x.k].media;
     return '<div class="platcard reveal" data-k="'+x.k+'"><div class="stage" data-m="'+ms[0]+'"></div>'+(ms.length>1?'<div class="thumbs">'+ms.map(function(id,i){return '<button aria-pressed="'+(i==0)+'" data-m="'+id+'" aria-label="'+((T.media[id]||'').replace(/"/g,'&quot;'))+'"><img src="media/'+id+'.jpg" alt="" loading="lazy"></button>'}).join('')+'</div>':'')+
-    '<div class="info"><b>'+(x.platform||x.org)+'</b><div class="org">'+x.org+' · '+x.period+'</div><p class="cap"></p>'+(D.exp[x.k].video?'<p style="margin-top:8px"><a href="'+D.exp[x.k].video+'" target="_blank" rel="noopener" style="font-weight:600">▶ '+P.videoLabel+' (YouTube) ↗</a></p>':'')+'</div></div>'}).join('')+'</div>',false);
+    '<div class="info"><b>'+(x.platform||x.org)+'</b><div class="org">'+x.org+' · '+x.period+'</div><p class="cap"></p>'+expLinks(x.k,'margin-top:8px')+'</div></div>'}).join('')+'</div>',false);
   h+=sec('p-skills',P.skillsShort,'<div class="split" style="margin-top:0"><div class="reveal"><h2 style="margin-bottom:18px">'+P.skillsTitle+'</h2>'+P.skills.map(function(s){return '<div style="margin-bottom:18px"><div class="note" style="margin:0;font-weight:600;color:var(--ink-2)">'+s.g+'</div><div class="chips">'+s.items.map(function(i){return '<span class="chip">'+i+'</span>'}).join('')+'</div></div>'}).join('')+'</div>'+
     '<div class="reveal"><h2 style="margin-bottom:6px">'+P.langTitle+'</h2><div class="langs-list">'+P.langs.map(function(l){var d='';for(var i=1;i<=5;i++)d+='<i class="'+(i<=l[2]?'f':'')+'"></i>';return '<div class="lg"><span>'+l[0]+'</span><div class="dots">'+d+'</div><b>'+l[1]+'</b></div>'}).join('')+'</div></div></div>',false);
   return h;
