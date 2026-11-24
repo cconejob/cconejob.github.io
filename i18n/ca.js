@@ -42,6 +42,8 @@ window.I18N.ca = {
     "master-fs-vsv": "Formula Student: demostració del vehicle en mode autònom, amb el núvol de punts del LiDAR i els cons detectats.",
     "iv2026-poster": "Pòster a l'IEEE Intelligent Vehicles Symposium 2026 (Detroit).",
     "ifac2026-title": "Ponència oral al 23è IFAC World Congress (Busan, 2026).",
+    "phd-defense-1": "Defensa de la tesi doctoral a la Facultat de Matemàtiques i Estadística de la UPC: el supervisor de seguretat funcional en temps d'execució.",
+    "phd-defense-2": "Defensa de la tesi doctoral: contribucions, publicacions i treball futur.",
     "ifac2026-talk-2": "Presentant «Reachability-Based Benchmarking of Physics-Based and Data-Driven Models for Automated Driving» a l'IFAC World Congress (Busan, 2026).",
     "ifac2026-talk": "Durant la presentació a l'IFAC World Congress (Busan, 2026)."
   },
@@ -236,6 +238,7 @@ window.I18N.ca = {
       { ic: "📈", title: "Control predictiu amb garanties", p: "Integració de l'anàlisi d'abastabilitat, el modelatge basat en dades i les especificacions temporals de seguretat en el control predictiu.", tags: ["MPC", "Abastabilitat", "Data-driven", "Signal Temporal Logic"] },
       { ic: "🧭", title: "Línia actual", p: "Consolidar una línia independent que combini predicció adaptativa, control conscient de la incertesa i supervisió formal de la seguretat, amb aplicacions en robòtica i infraestructures crítiques resilients.", tags: ["Predicció adaptativa", "Incertesa", "Infraestructures crítiques"] }
     ],
+    defenseTitle: "Defensa de la tesi",
     thesisShort: "Tesi",
     thesis: { tag: "Tesi doctoral · 2025", title: "Functional Safety for Highly Automated Vehicles", p: "Doctorat industrial fet conjuntament a la UPC, l'Institut de Robòtica i Informàtica Industrial (IRI, CSIC-UPC) i Renault Group. Els mètodes es van implementar i validar sobre prototips reals de vehicle autònom i amb dades experimentals.", chips: ["Excel·lent Cum Laude", "Menció internacional", "Menció industrial"], sup: "Directors: Vicenç Puig i Bernardo Morcego (UPC/IRI) · Supervisor industrial: Vicente Milanés (Renault Group)", stays: "Dues estades de recerca a la Technische Universität München (Munic i Heilbronn), al Cyber-Physical Systems Group, treballant en mètodes formals per a la seguretat en robòtica." },
     pubsShort: "Publicacions", pubsTitle: "Publicacions seleccionades",

@@ -402,10 +402,10 @@ footer{padding:40px 0;text-align:center;font-size:.85rem;color:var(--muted);bord
 <footer id="foot"></footer>
 <div id="lb" role="dialog" aria-modal="true"><button aria-label="×">×</button><img alt=""><p></p></div>
 
-<script src="data.js?v=20261124g"></script>
-<script src="i18n/es.js?v=20261124g"></script>
-<script src="i18n/en.js?v=20261124g"></script>
-<script src="i18n/ca.js?v=20261124g"></script>
+<script src="data.js?v=20261124h"></script>
+<script src="i18n/es.js?v=20261124h"></script>
+<script src="i18n/en.js?v=20261124h"></script>
+<script src="i18n/ca.js?v=20261124h"></script>
 <script>
 (function(){
 var D=window.DATA, VIEWS=['inicio','docencia','investigacion','profesional','formacion'];
@@ -518,7 +518,7 @@ function vResearch(){
   h+=sec('r-accion',R.actionShort,'<div class="s-head reveal"><h2>'+R.actionTitle+'</h2></div><p class="note reveal" style="margin-top:-12px">'+R.actionNote+'</p><div class="gallery">'+D.researchAction.map(function(id){return mfig(id)}).join('')+'</div>',false);
   var th=R.thesis;
   h+=sec('r-tesis',R.thesisShort,'<div class="split" style="margin-top:0"><div class="reveal"><span class="tag">'+th.tag+'</span><h2 style="margin:6px 0 16px">'+th.title+'</h2><p class="intro">'+th.p+'</p><div class="chips">'+th.chips.map(function(c){return '<span class="chip done">'+c+'</span>'}).join('')+'</div></div>'+
-    '<div class="reveal"><div class="card"><p class="m">'+th.sup+'</p><div class="callout ok" style="margin-bottom:0"><b>TUM ·</b> '+th.stays+'</div></div></div></div>',false);
+    '<div class="reveal"><div class="card"><p class="m">'+th.sup+'</p><div class="callout ok" style="margin-bottom:0"><b>TUM ·</b> '+th.stays+'</div></div></div></div>'+'<h3 class="reveal" style="margin-top:36px">'+T.research.defenseTitle+'</h3><div class="gallery" style="grid-template-columns:repeat(2,1fr)">'+D.phdPhotos.map(function(id){return mfig(id)}).join('')+'</div>',false);
   var pubs='<div class="s-head reveal"><h2>'+R.pubsTitle+'</h2></div><div class="filter pubf reveal">'+['all','j','c'].map(function(k,i){return '<button aria-pressed="'+(i==0)+'" data-f="'+k+'">'+R.filters[k]+'</button>'}).join('')+'</div><div class="pubs">'+
     D.pubs.map(function(p){return '<article class="pub reveal" data-t="'+p.type+'"><div class="yr">'+p.year+'<small>'+R.typeLabel[p.type]+'</small></div><div><h3>'+p.title+'</h3><div class="au">'+me(p.authors)+'</div><div class="ve">'+p.venue+'</div>'+(p.doi?'<a class="doi" href="https://doi.org/'+p.doi+'" target="_blank" rel="noopener">DOI: '+p.doi+' ↗</a>':'<a class="doi" href="'+p.url+'" target="_blank" rel="noopener">Google Scholar ↗</a>')+'</div></article>'}).join('')+'</div><p class="reveal" style="margin-top:18px"><a href="'+D.scholar+'" target="_blank" rel="noopener" style="font-weight:600">'+R.scholar+' ↗</a></p>';
   h+=sec('r-pubs',R.pubsShort,pubs,true);
@@ -562,7 +562,7 @@ function vStudy(){
   h+=sec('f-titulaciones',S.degShort,'<div class="s-head reveal"><h2>'+S.degTitle+'</h2></div><div class="timeline reveal" style="margin-top:20px">'+T.prof.edu.map(function(e){return '<div class="tl"><div class="when">'+e.y+' · '+e.w+'</div><h3>'+e.t+'</h3><p>'+e.p+'</p></div>'}).join('')+'</div>',true);
   h+=sec('f-grado',S.gradoShort,'<div class="s-head reveal"><h2>'+S.gradoTitle+'</h2></div><p class="intro reveal">'+S.gradoIntro+'</p>'+['p1','p2','tfg'].map(studyCard).join(''),false);
   h+=sec('f-master',S.masterShort,'<div class="s-head reveal"><h2>'+S.masterTitle+'</h2></div><p class="intro reveal">'+S.masterIntro+'</p>'+['fs','tfm'].map(studyCard).join(''),true);
-  h+=sec('f-doctorado',S.phdShort,'<div class="s-head reveal"><h2>'+S.phdTitle+'</h2></div><p class="intro reveal">'+S.phdP+'</p><p class="reveal"><a href="#investigacion" style="font-weight:600">'+S.phdLink+' →</a></p>',false);
+  h+=sec('f-doctorado',S.phdShort,'<div class="s-head reveal"><h2>'+S.phdTitle+'</h2></div><p class="intro reveal">'+S.phdP+'</p><div class="gallery" style="grid-template-columns:repeat(2,1fr)">'+D.phdPhotos.map(function(id){return mfig(id)}).join('')+'</div><p class="reveal"><a href="#investigacion" style="font-weight:600">'+S.phdLink+' →</a></p>',false);
   return h;
 }
 

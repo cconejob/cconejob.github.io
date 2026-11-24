@@ -42,6 +42,8 @@ window.I18N.en = {
     "master-fs-vsv": "Formula Student: demonstration of the car in autonomous mode, with the LiDAR point cloud and detected cones.",
     "iv2026-poster": "Poster at the IEEE Intelligent Vehicles Symposium 2026 (Detroit).",
     "ifac2026-title": "Oral presentation at the 23rd IFAC World Congress (Busan, 2026).",
+    "phd-defense-1": "PhD defence at UPC's Facultat de Matemàtiques i Estadística: the runtime functional safety supervisor.",
+    "phd-defense-2": "PhD defence: contributions, publications and future work.",
     "ifac2026-talk-2": "Presenting “Reachability-Based Benchmarking of Physics-Based and Data-Driven Models for Automated Driving” at the IFAC World Congress (Busan, 2026).",
     "ifac2026-talk": "During the talk at the IFAC World Congress (Busan, 2026)."
   },
@@ -236,6 +238,7 @@ window.I18N.en = {
       { ic: "📈", title: "Predictive control with guarantees", p: "Integrating reachability analysis, data-driven modelling and temporal safety specifications into predictive control.", tags: ["MPC", "Reachability", "Data-driven", "Signal Temporal Logic"] },
       { ic: "🧭", title: "Current line", p: "Building an independent research line that combines adaptive prediction, uncertainty-aware control and formal safety supervision, with applications in robotics and resilient critical infrastructure.", tags: ["Adaptive prediction", "Uncertainty", "Critical infrastructure"] }
     ],
+    defenseTitle: "Thesis defence",
     thesisShort: "Thesis",
     thesis: { tag: "Doctoral thesis · 2025", title: "Functional Safety for Highly Automated Vehicles", p: "Industrial doctorate carried out jointly at UPC, the Institut de Robòtica i Informàtica Industrial (IRI, CSIC-UPC) and Renault Group. The methods were implemented and validated on real autonomous vehicle prototypes and with experimental data.", chips: ["Excellent Cum Laude", "International mention", "Industrial mention"], sup: "Supervisors: Vicenç Puig and Bernardo Morcego (UPC/IRI) · Industrial supervisor: Vicente Milanés (Renault Group)", stays: "Two research stays at the Technical University of Munich (Munich and Heilbronn), in the Cyber-Physical Systems Group, working on formal methods for safety in robotics." },
     pubsShort: "Publications", pubsTitle: "Selected publications",
