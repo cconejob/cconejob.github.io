@@ -42,6 +42,7 @@ window.I18N.es = {
     "master-fs-vsv": "Formula Student: demostración del vehículo en modo autónomo, con la nube de puntos del LiDAR y los conos detectados.",
     "iv2026-poster": "Póster en el IEEE Intelligent Vehicles Symposium 2026 (Detroit).",
     "ifac2026-title": "Ponencia oral en el 23.º IFAC World Congress (Busan, 2026).",
+    "ifac2026-talk-2": "Presentando «Reachability-Based Benchmarking of Physics-Based and Data-Driven Models for Automated Driving» en el IFAC World Congress (Busan, 2026).",
     "ifac2026-talk": "Durante la presentación en el IFAC World Congress (Busan, 2026)."
   },
 
