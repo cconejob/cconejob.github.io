@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="icon" href="data:image/svg+xml,%3Csvg viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='11' fill='%2314213d'/%3E%3Cg fill='none' stroke-width='2.2' stroke-linecap='round'%3E%3Cpath class='w w1' d='M14.5 15.5a7.8 7.8 0 0 1 11 0' stroke='%2314b8a6'/%3E%3Cpath class='w w2' d='M11.4 12.4a12.2 12.2 0 0 1 17.2 0' stroke='%23818cf8'/%3E%3Cpath class='w w3' d='M8.3 9.3a16.6 16.6 0 0 1 23.4 0' stroke='%23f59e0b'/%3E%3C/g%3E%3Crect x='11.5' y='23.2' width='2.6' height='5' rx='1.2' fill='%23f472b6'/%3E%3Crect x='25.9' y='23.2' width='2.6' height='5' rx='1.2' fill='%23f472b6'/%3E%3Crect x='11.5' y='30.4' width='2.6' height='4.4' rx='1.2' fill='%23f472b6'/%3E%3Crect x='25.9' y='30.4' width='2.6' height='4.4' rx='1.2' fill='%23f472b6'/%3E%3Crect x='13.4' y='19.5' width='13.2' height='17' rx='4.6' fill='%23fff'/%3E%3Crect x='15.4' y='22.6' width='9.2' height='3.6' rx='1.4' fill='%2314213d' opacity='.85'/%3E%3Ccircle cx='20' cy='19.6' r='2.3' fill='%23fff' stroke='%2314213d' stroke-width='1.2'/%3E%3C/svg%3E">
+<link rel="icon" type="image/png" href="img/favicon.png">
 <title>Carlos Conejo Barceló · Automática, control y robótica</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -42,11 +42,8 @@ header.top{position:sticky;top:0;z-index:60;background:rgba(247,245,240,.9);back
 header.top .topbar{display:flex;align-items:center;gap:16px;height:60px}
 .brand{font-family:var(--serif);font-weight:600;white-space:nowrap;text-decoration:none;color:var(--ink);display:flex;align-items:center;gap:10px}
 .brand img{width:32px;height:32px;border-radius:50%;object-fit:cover;object-position:50% 20%}
-.brand .logo{display:block;transition:transform .35s cubic-bezier(.2,.8,.2,1)}
+.brand .logo{display:block;height:46px;width:auto;transition:transform .35s cubic-bezier(.2,.8,.2,1)}
 .brand:hover .logo{transform:translateY(-2px) rotate(-4deg)}
-.brand .logo .w{animation:scan 2.4s ease-in-out infinite;opacity:.25}
-.brand .logo .w2{animation-delay:.25s}.brand .logo .w3{animation-delay:.5s}
-@keyframes scan{0%,100%{opacity:.2}35%{opacity:1}}
 .hero h1 .dr{color:var(--accent)}
 .views{display:flex;gap:4px;margin-left:auto;overflow-x:auto;scrollbar-width:none}
 .views::-webkit-scrollbar{display:none}
@@ -390,7 +387,7 @@ footer{padding:40px 0;text-align:center;font-size:.85rem;color:var(--muted);bord
 <div id="progress"></div>
 <header class="top">
   <div class="wrap topbar">
-    <a class="brand" href="#inicio" aria-label="Carlos Conejo Barceló · Inicio" title="Carlos Conejo Barceló"><svg class="logo" viewBox="0 0 40 40" width="38" height="38" aria-hidden="true"><rect width="40" height="40" rx="11" fill="#14213d"/><g fill="none" stroke-width="2.2" stroke-linecap="round"><path class="w w1" d="M14.5 15.5a7.8 7.8 0 0 1 11 0" stroke="#14b8a6"/><path class="w w2" d="M11.4 12.4a12.2 12.2 0 0 1 17.2 0" stroke="#818cf8"/><path class="w w3" d="M8.3 9.3a16.6 16.6 0 0 1 23.4 0" stroke="#f59e0b"/></g><rect x="11.5" y="23.2" width="2.6" height="5" rx="1.2" fill="#f472b6"/><rect x="25.9" y="23.2" width="2.6" height="5" rx="1.2" fill="#f472b6"/><rect x="11.5" y="30.4" width="2.6" height="4.4" rx="1.2" fill="#f472b6"/><rect x="25.9" y="30.4" width="2.6" height="4.4" rx="1.2" fill="#f472b6"/><rect x="13.4" y="19.5" width="13.2" height="17" rx="4.6" fill="#fff"/><rect x="15.4" y="22.6" width="9.2" height="3.6" rx="1.4" fill="#14213d" opacity=".85"/><circle cx="20" cy="19.6" r="2.3" fill="#fff" stroke="#14213d" stroke-width="1.2"/></svg></a>
+    <a class="brand" href="#inicio" aria-label="Carlos Conejo Barceló · Inicio" title="Carlos Conejo Barceló"><img class="logo" src="img/logo-ccb.png" alt="CCB" width="76" height="40"></a>
     <nav class="views" id="views" aria-label="Secciones principales"></nav>
     <div class="langs" id="langs" role="group" aria-label="Idioma">
       <button data-l="es">ES</button><button data-l="en">EN</button><button data-l="ca">CA</button>
@@ -402,10 +399,10 @@ footer{padding:40px 0;text-align:center;font-size:.85rem;color:var(--muted);bord
 <footer id="foot"></footer>
 <div id="lb" role="dialog" aria-modal="true"><button aria-label="×">×</button><img alt=""><p></p></div>
 
-<script src="data.js?v=20261124h"></script>
-<script src="i18n/es.js?v=20261124h"></script>
-<script src="i18n/en.js?v=20261124h"></script>
-<script src="i18n/ca.js?v=20261124h"></script>
+<script src="data.js?v=20261124i"></script>
+<script src="i18n/es.js?v=20261124i"></script>
+<script src="i18n/en.js?v=20261124i"></script>
+<script src="i18n/ca.js?v=20261124i"></script>
 <script>
 (function(){
 var D=window.DATA, VIEWS=['inicio','docencia','investigacion','profesional','formacion'];
