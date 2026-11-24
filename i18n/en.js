@@ -27,6 +27,7 @@ window.I18N.en = {
     "ifac2026-backdrop": "At the 23rd IFAC World Congress (Busan, 2026).",
     "pulsar-booth-carlos": "At the PULSAR HRI stand in the IFAC World Congress exhibition (Busan, 2026).",
     "grado-proyecto-robot": "Project I: servo-driven mechanism controlled with Arduino.",
+    "grado-loclock": "Project II: first Loclock prototype with Arduino, real-time clock and LCD screen (2016).",
     "grado-tfg": "Bachelor's thesis: two robots driving in a platoon on the lab circuit.",
     "master-fs-vsv": "Formula Student: demonstration of the car in autonomous mode, with the LiDAR point cloud and detected cones.",
     "iv2026-poster": "Poster at the IEEE Intelligent Vehicles Symposium 2026 (Detroit).",
