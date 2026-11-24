@@ -19,7 +19,7 @@ window.DATA = {
     "renault-supervisor": { v: 1 }, "renault-pedestrian": { v: 1 }, "renault-reach": { v: 1 },
     "epfl-loomo-rfo": { v: 1 }, "epfl-skeleton-1": { v: 1 }, "epfl-skeleton-2": { v: 1 },
     "epfl-loomo-obstacles": { v: 1, tall: 1 }, "epfl-loomo-free": { v: 1, tall: 1 }, "epfl-loomos": {},
-    "pulsar-stand": {}, "cvc-egolf-pirineo": {}, "cvc-egolf-night": {}, "cvc-egolf-fornet": {}, "cvc-egolf-circuito": {}, "fs-driverless-2019": {}, "fs-driverless-run": { v: 1 }, "grado-proyecto-robot": { v: 1 }, "grado-tfg": { v: 1 }, "master-fs-vsv": { v: 1 }, "grado-loclock": {},
+    "pulsar-stand": {}, "cvc-egolf-pirineo": {}, "cvc-egolf-night": {}, "cvc-egolf-fornet": {}, "cvc-egolf-circuito": {}, "fs-driverless-2019": {}, "fs-driverless-run": { v: 1 }, "grado-proyecto-robot": { v: 1 }, "grado-tfg": { v: 1 }, "master-fs-vsv": { v: 1 }, "fs-montserrat": {}, "fs-sunset": {}, "fs-team-track": {}, "fs-team-studio": {}, "fs-team-montmelo": {}, "grado-loclock": {},
     "iv2026-poster": {}, "ifac2026-title": {}, "ifac2026-talk": {}, "ifac2026-backdrop": {}, "pulsar-booth-carlos": {}, "pulsar-booth-products": {}, "pulsar-booth-visit-1": {}, "pulsar-booth-visit-2": {}
   },
   homeGallery: ["ifac2026-backdrop", "pulsar-booth-carlos", "iv2026-poster", "renault-supervisor", "cvc-egolf-pirineo", "epfl-loomo-rfo"],
@@ -29,7 +29,7 @@ window.DATA = {
     p1: { media: ["grado-proyecto-robot"] },
     p2: { media: ["grado-loclock"], links: [["blog", "https://programminginarduino.wordpress.com/"], ["memoria", "https://programminginarduino.wordpress.com/wp-content/uploads/2017/03/loclock.pdf"]] },
     tfg: { media: ["grado-tfg"], links: [["read", "https://upcommons.upc.edu/server/api/core/bitstreams/28c7856a-73d9-45d8-beb7-d3ae312cfbb6/content"]] },
-    fs: { media: ["master-fs-vsv", "fs-driverless-run", "fs-driverless-2019"], links: [["video", "https://www.youtube.com/watch?v=NzhGDAYJ43Y"]] },
+    fs: { media: ["master-fs-vsv", "fs-team-montmelo", "fs-montserrat", "fs-driverless-run", "fs-sunset", "fs-team-studio", "fs-team-track", "fs-driverless-2019"], links: [["video", "https://www.youtube.com/watch?v=NzhGDAYJ43Y"]] },
     tfm: { media: ["epfl-loomo-obstacles", "epfl-loomo-free", "epfl-loomo-rfo", "epfl-skeleton-1", "epfl-skeleton-2"], links: [["read", "https://upcommons.upc.edu/server/api/core/bitstreams/1b3a787b-43fd-4866-8dd0-b2df0d4eeb8e/content"]] }
   },
   exp: {
