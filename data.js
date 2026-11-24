@@ -20,7 +20,7 @@ window.DATA = {
     "epfl-loomo-rfo": { v: 1 }, "epfl-skeleton-1": { v: 1 }, "epfl-skeleton-2": { v: 1 },
     "epfl-loomo-obstacles": { v: 1, tall: 1 }, "epfl-loomo-free": { v: 1, tall: 1 }, "epfl-loomos": {},
     "pulsar-stand": {}, "cvc-egolf-pirineo": {}, "cvc-egolf-night": {}, "cvc-egolf-fornet": {}, "cvc-egolf-circuito": {}, "fs-driverless-2019": {}, "fs-driverless-run": { v: 1 }, "grado-proyecto-robot": { v: 1 }, "grado-tfg": { v: 1 }, "master-fs-vsv": { v: 1 }, "grado-loclock": {},
-    "iv2026-poster": {}, "ifac2026-title": {}, "ifac2026-talk": {}, "ifac2026-backdrop": {}, "pulsar-booth-carlos": {}
+    "iv2026-poster": {}, "ifac2026-title": {}, "ifac2026-talk": {}, "ifac2026-backdrop": {}, "pulsar-booth-carlos": {}, "pulsar-booth-products": {}, "pulsar-booth-visit-1": {}, "pulsar-booth-visit-2": {}
   },
   homeGallery: ["ifac2026-backdrop", "pulsar-booth-carlos", "iv2026-poster", "renault-supervisor", "cvc-egolf-pirineo", "epfl-loomo-rfo"],
   researchAction: ["renault-supervisor", "renault-reach", "renault-pedestrian"],
@@ -34,7 +34,7 @@ window.DATA = {
   },
   exp: {
     lector: { areas: ["docencia", "investigacion", "profesional"], media: [] },
-    arquimea: { areas: ["profesional", "investigacion"], media: ["pulsar-booth-carlos", "pulsar-stand"] },
+    arquimea: { areas: ["profesional", "investigacion"], media: ["pulsar-booth-products", "pulsar-booth-carlos", "pulsar-booth-visit-2", "pulsar-booth-visit-1", "pulsar-stand"] },
     renault: { areas: ["profesional", "investigacion"], media: ["renault-supervisor", "renault-pedestrian", "renault-reach"] },
     eebe: { areas: ["docencia", "profesional"], media: [] },
     cvc: { areas: ["profesional", "investigacion"], media: ["cvc-egolf-fornet", "cvc-egolf-pirineo", "cvc-egolf-circuito", "cvc-egolf-night"], links: [["doc", "https://youtu.be/ZPCt7xkgvX0"], ["trailer", "https://www.youtube.com/watch?v=mdTmswqy3Ck"]] },
