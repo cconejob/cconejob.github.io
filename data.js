@@ -17,12 +17,19 @@ window.DATA = {
     "renault-supervisor": { v: 1 }, "renault-pedestrian": { v: 1 }, "renault-reach": { v: 1 },
     "epfl-loomo-rfo": { v: 1 }, "epfl-skeleton-1": { v: 1 }, "epfl-skeleton-2": { v: 1 },
     "epfl-loomo-obstacles": { v: 1, tall: 1 }, "epfl-loomo-free": { v: 1, tall: 1 }, "epfl-loomos": {},
-    "pulsar-stand": {}, "cvc-egolf-pirineo": {}, "cvc-egolf-night": {}, "fs-driverless-2019": {}, "fs-driverless-run": { v: 1 },
+    "pulsar-stand": {}, "cvc-egolf-pirineo": {}, "cvc-egolf-night": {}, "fs-driverless-2019": {}, "fs-driverless-run": { v: 1 }, "grado-proyecto-robot": { v: 1 }, "grado-tfg": { v: 1 }, "master-fs-vsv": { v: 1 },
     "iv2026-poster": {}, "ifac2026-title": {}, "ifac2026-talk": {}, "ifac2026-backdrop": {}, "pulsar-booth-carlos": {}
   },
   homeGallery: ["ifac2026-backdrop", "pulsar-booth-carlos", "iv2026-poster", "renault-supervisor", "cvc-egolf-pirineo", "epfl-loomo-rfo"],
   researchAction: ["renault-supervisor", "renault-reach", "renault-pedestrian"],
   confPhotos: ["iv2026-poster", "ifac2026-backdrop", "ifac2026-title", "ifac2026-talk", "pulsar-booth-carlos", "pulsar-stand"],
+  study: {
+    p1: { media: ["grado-proyecto-robot"] },
+    p2: { media: [], links: [["blog", "https://programminginarduino.wordpress.com/"], ["memoria", "https://programminginarduino.wordpress.com/wp-content/uploads/2017/03/loclock.pdf"]] },
+    tfg: { media: ["grado-tfg"], links: [["read", "https://upcommons.upc.edu/server/api/core/bitstreams/28c7856a-73d9-45d8-beb7-d3ae312cfbb6/content"]] },
+    fs: { media: ["master-fs-vsv", "fs-driverless-run", "fs-driverless-2019"], links: [["video", "https://www.youtube.com/watch?v=NzhGDAYJ43Y"]] },
+    tfm: { media: ["epfl-loomo-obstacles", "epfl-loomo-free", "epfl-loomo-rfo", "epfl-skeleton-1", "epfl-skeleton-2"], links: [["read", "https://upcommons.upc.edu/server/api/core/bitstreams/1b3a787b-43fd-4866-8dd0-b2df0d4eeb8e/content"]] }
+  },
   exp: {
     lector: { areas: ["docencia", "investigacion", "profesional"], media: [] },
     arquimea: { areas: ["profesional", "investigacion"], media: ["pulsar-booth-carlos", "pulsar-stand"] },
@@ -30,7 +37,7 @@ window.DATA = {
     eebe: { areas: ["docencia", "profesional"], media: [] },
     cvc: { areas: ["profesional", "investigacion"], media: ["cvc-egolf-pirineo", "cvc-egolf-night"], video: "https://youtu.be/ZPCt7xkgvX0" },
     epfl: { areas: ["profesional", "investigacion"], media: ["epfl-loomo-rfo", "epfl-skeleton-1", "epfl-skeleton-2", "epfl-loomo-obstacles", "epfl-loomo-free", "epfl-loomos"] },
-    bcn: { areas: ["profesional"], media: ["fs-driverless-run", "fs-driverless-2019"], video: "https://www.youtube.com/watch?v=NzhGDAYJ43Y" }
+    bcn: { areas: ["formacion", "profesional"], media: [], video: "https://www.youtube.com/watch?v=NzhGDAYJ43Y" }
   },
   pubs: [
     { type: "j", year: 2026, authors: "Conejo, C., Alanwar, A., Puig, V., & Morcego, B.", title: "Data-Driven Predictive Control With Functional Safety Guarantees for Autonomous Vehicles", venue: "IEEE Transactions on Intelligent Transportation Systems, 27(7), 8495–8510", doi: "10.1109/TITS.2026.3673196" },

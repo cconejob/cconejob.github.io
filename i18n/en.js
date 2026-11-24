@@ -2,7 +2,7 @@ window.I18N = window.I18N || {};
 window.I18N.en = {
   meta: { title: "Carlos Conejo Barceló · Automatic control and robotics" },
   ui: {
-    nav: { inicio: "Home", docencia: "Teaching", investigacion: "Research", profesional: "Professional" },
+    nav: { inicio: "Home", docencia: "Teaching", investigacion: "Research", profesional: "Professional", formacion: "Education" },
     lang: "Language", close: "Close", hover: "Hover over or tap the points.", all: "All",
     figure: "Figure", more: "Show more", less: "Show less", footer: "Carlos Conejo Barceló · ESAII Department · Universitat Politècnica de Catalunya",
     areas: { docencia: "Teaching", investigacion: "Research", profesional: "Professional", formacion: "Education" },
@@ -26,6 +26,9 @@ window.I18N.en = {
     "fs-driverless-run": "The car on track during the Formula Student competition (2019).",
     "ifac2026-backdrop": "At the 23rd IFAC World Congress (Busan, 2026).",
     "pulsar-booth-carlos": "At the PULSAR HRI stand in the IFAC World Congress exhibition (Busan, 2026).",
+    "grado-proyecto-robot": "Project I: servo-driven mechanism controlled with Arduino.",
+    "grado-tfg": "Bachelor's thesis: two robots driving in a platoon on the lab circuit.",
+    "master-fs-vsv": "Formula Student: demonstration of the car in autonomous mode, with the LiDAR point cloud and detected cones.",
     "iv2026-poster": "Poster at the IEEE Intelligent Vehicles Symposium 2026 (Detroit).",
     "ifac2026-title": "Oral presentation at the 23rd IFAC World Congress (Busan, 2026).",
     "ifac2026-talk": "During the talk at the IFAC World Congress (Busan, 2026)."
@@ -39,11 +42,12 @@ window.I18N.en = {
       "I am an industrial engineer specialised in robotics and hold a Ph.D. in Automatic Control, Robotics and Vision from UPC. I completed an industrial doctorate with Renault Group and the Institut de Robòtica i Informàtica Industrial (CSIC-UPC), graded Excellent Cum Laude with International and Industrial mentions.",
       "Since September 2026 I have been an Assistant Professor at ESEIAAT. My work brings together three areas that feed into each other: <strong>teaching</strong> control and robotics, <strong>research</strong> on the safety of autonomous systems, and <strong>professional experience</strong> deploying algorithms on real physical platforms."
     ],
-    branchesTitle: "Three areas, one common thread",
+    branchesTitle: "Four areas, one common thread",
     branches: {
-      docencia: { title: "Teaching", desc: "Automatic control and robotics at UPC since 2022, with an experimental, participatory and feedback-based approach.", stats: [["4", "courses taught"], ["5", "academic years"], ["4.5–4.9", "in “helps me learn” (out of 5)"]] },
+      docencia: { title: "Teaching", desc: "Automatic control and robotics at UPC since 2022, with an experimental, participatory and feedback-based approach.", stats: [["4", "courses taught"], ["5", "academic years"], ["4.5–4.9", "student rating (out of 5)"]] },
       investigacion: { title: "Research", desc: "Functional safety, fault diagnosis, reachability analysis and predictive control for autonomous systems.", stats: [["9", "selected publications"], ["2", "patents"], ["5", "projects"]] },
-      profesional: { title: "Professional", desc: "More than five years of R&D in robotics and autonomous vehicles, in research centres and in industry.", stats: [["5+", "years of R&D"], ["5", "real platforms"], ["6", "centres and companies"]] }
+      profesional: { title: "Professional", desc: "More than five years of R&D in robotics and autonomous vehicles, in research centres and in industry.", stats: [["5+", "years of R&D"], ["5", "real platforms"], ["6", "centres and companies"]] },
+      formacion: { title: "Education", desc: "BSc and MSc in Industrial Engineering and a Ph.D. in Automatic Control, Robotics and Vision, always built around projects on real systems.", stats: [["3", "degrees"], ["2", "exchanges"], ["5", "projects"]] }
     },
     tlTitle: "Career",
     tlNote: "Filter by area:",
@@ -56,8 +60,8 @@ window.I18N.en = {
       { y: "2021–22", b: ["profesional", "investigacion"], t: "Motion Control Engineer", w: "Computer Vision Center (CVC-UAB) · Barcelona" },
       { y: "2020–21", b: ["profesional", "investigacion"], t: "Research Assistant · mobile robotics for rehabilitation", w: "EPFL-VITA & NeuroRestore (CHUV) · Lausanne" },
       { y: "2018–21", b: ["formacion"], t: "MSc in Industrial Engineering · Automation and Robotics", w: "UPC-ETSEIB · exchange at EPFL (Lausanne)" },
-      { y: "2018–19", b: ["profesional"], t: "Chief of Estimation & Control", w: "BCN e-Motorsport · Formula Student Driverless" },
-      { y: "2013–18", b: ["formacion"], t: "BSc in Industrial Engineering", w: "UPC-ETSEIB · exchange at KIT (Karlsruhe)" }
+      { y: "2018–19", b: ["formacion", "profesional"], t: "Chief of Estimation & Control", w: "BCN e-Motorsport · Formula Student Driverless" },
+      { y: "2013–18", b: ["formacion"], t: "BSc in Industrial Technology Engineering", w: "UPC-ETSEIB · exchange at KIT (Karlsruhe)" }
     ],
     galleryTitle: "In pictures",
     galleryNote: "Click any photo or video to enlarge it.",
@@ -249,6 +253,29 @@ window.I18N.en = {
     service: ["Reviewer for IEEE and IFAC journals and conferences", "Session chair at the IEEE Intelligent Vehicles Symposium 2026", "Open-access publications, institutional repositories and released software"]
   },
 
+  study: {
+    eyebrow: "Education",
+    title: "Learning by building",
+    lead: "From my bachelor's to my Ph.D., every stage of my education has revolved around projects where control theory had to work on a real system.",
+    stats: [["3", "degrees at UPC"], ["2", "international exchanges (KIT and EPFL)"], ["5", "highlighted bachelor's and master's projects"], ["Excellent", "bachelor's thesis grade"]],
+    degShort: "Degrees", degTitle: "Degrees",
+    gradoShort: "Bachelor's", gradoTitle: "BSc in Industrial Technology Engineering · ETSEIB",
+    gradoIntro: "Three projects that show a progression: from a first introduction to electronics to a control system shared across several robots.",
+    masterShort: "Master's", masterTitle: "MSc in Industrial Engineering · ETSEIB and EPFL",
+    masterIntro: "During my master's I moved into autonomous vehicles: first in competition, with Formula Student Driverless, and then in research, with my master's thesis at EPFL.",
+    phdShort: "Ph.D.", phdTitle: "Ph.D. in Automatic Control, Robotics and Vision",
+    phdP: "The industrial doctorate with Renault Group and IRI (UPC-CSIC) completed this path: the control and safety methods were validated on real autonomous vehicle prototypes. Excellent Cum Laude, with International and Industrial mentions.",
+    phdLink: "See the thesis and publications under Research",
+    labels: { director: "Supervision", team: "Team", grade: "Grade", read: "Read the document", blog: "Project blog", memoria: "Loclock report (PDF)", video: "Watch on YouTube" },
+    projects: {
+      p1: { tag: "Project I · 2nd year", title: "Servo-driven mechanism", p: "My first contact with electronics and microcontroller programming: a servo-driven mechanism, built and programmed with Arduino.", bullets: ["Introduction to electronics with Arduino", "Mechanical assembly, wiring and programming of the servo control"] },
+      p2: { tag: "Project II · 3rd year", title: "Loclock: a watch for nursing homes", p: "A watch prototype for nursing-home residents: it reminds them of daily tasks, such as meals or showers, and has an emergency button that alerts the nursing staff.", bullets: ["Arduino UNO, Bluetooth with an Android app, real-time clock, LCD screen and voice messages", "Room-level location of the resident using radio frequency and ultrasound", "The team also documented 16 guided Arduino Starter Kit projects in a blog"], team: "Júlia Bayascas, Sofía Cámara, Arnau Colom, Carlos Conejo and Aina Galofré", director: "Cecilio Angulo" },
+      tfg: { tag: "Bachelor's thesis · 2017", title: "Adaptive Cruise Control, an scaled model: platooning using two-wheeled robots", p: "A scaled recreation of vehicles driving in a platoon on a shared path, to study adaptive cruise control (ACC) and avoid collisions.", bullets: ["Built three more two-wheeled robots, for four identical vehicles", "Characterised sensors and motors and unified the control code (STM32F4)", "PI controller for the distance between vehicles and a Wi-Fi network (ESP8266) between robots and computer", "Validated on a closed circuit with braking tests and driving behind a leader vehicle"], director: "Arnau Dòria Cerezo and Víctor Repecho del Corral", grade: "Excellent" },
+      fs: { tag: "Formula Student Driverless · 2018–2019", title: "BCN e-Motorsport: Chief of Estimation & Control", p: "I led the estimation and control area of the team's driverless electric race car, in its first entry in the Driverless category.", bullets: ["Cross-functional team of 7 developing ROS-based systems", "Localisation, trajectory tracking and control algorithms under racing conditions", "The main video demonstrates the car running in autonomous mode", "Hands-on and team-organisation experience that prepared me for my later jobs"] },
+      tfm: { tag: "Master's thesis · EPFL · 2021", title: "Design and Implementation of a Pipeline for Fully Autonomous Driving Systems", p: "A modular, real-time pipeline for mobile robots, developed at EPFL's VITA lab. It is organised into five blocks (state estimation, perception, prediction, planning and control), each with a swappable algorithm.", bullets: ["ROS on a Segway Loomo robot, connected wirelessly to an external computer", "Human trajectory prediction with TrajNet++, prediction-aware RRT* planning and MPC control", "With a person moving at constant speed, collisions dropped from 45% without a predictor to 5% with TrajNet++", "Neuroscience application, described in a paper with Yuejiang Liu, Mohammadhossein Bahari and Alexandre Alahi: the robot tracks the legs of a paraplegic patient (hip, knee and ankle, with OpenPifPaf) to feed the stimulation algorithm that helps them walk with a walker", "Detection on a GPU server at up to 40 Hz and PID control of the robot's camera so the patient is not lost, with tests at EPFL"] }
+    }
+  },
+
   prof: {
     eyebrow: "Professional experience",
     title: "From algorithms to real platforms",
@@ -262,14 +289,14 @@ window.I18N.en = {
       { k: "eebe", role: "Associate Lecturer", area: "Automatic control", org: "UPC · EEBE", place: "Barcelona, Spain", period: "09/2022 – 11/2025", platform: "", bullets: ["Lab sessions of Regulació Automàtica and Tècniques de Control with MATLAB, Simulink and real industrial controllers", "Supervision and assessment of projects on PID tuning, system identification and feedback control, in simulation and on hardware"] },
       { k: "cvc", role: "Motion Control Engineer", area: "Autonomous vehicles", org: "Computer Vision Center (CVC-UAB)", place: "Barcelona, Spain", period: "05/2021 – 09/2022", platform: "Volkswagen e-Golf autonomous prototype", bullets: ["Real-time path planning and EKF-based state estimation in ROS (Python)", "Dynamic model predictive controller (MPC) for obstacle-aware trajectory tracking", "Deployment and tuning of motion control on a Volkswagen e-Golf autonomous prototype and in the CARLA simulator", "Integration with the perception and localisation teams in the vehicle, in the Pyrenees"] },
       { k: "epfl", role: "Research Assistant", area: "Mobile robotics for rehabilitation", org: "EPFL-VITA & NeuroRestore (CHUV)", place: "Lausanne, Switzerland", period: "09/2020 – 05/2021", platform: "Segway Loomo-based robotic assistant", bullets: ["Real-time control and tracking algorithms in ROS (C++/Python) for a Segway Loomo-based robotic assistant", "Integration of perception modules to autonomously follow paraplegic patients during therapy sessions", "Collaboration with neuroscientists to adapt robotic solutions to the rehabilitation workflow"] },
-      { k: "bcn", role: "Chief of Estimation & Control", area: "Autonomous vehicles", org: "BCN e-Motorsport (Formula Student Driverless)", place: "Barcelona, Spain", period: "09/2018 – 08/2019", platform: "Driverless electric race car", bullets: ["Led a cross-functional team of 7 developing ROS-based systems for a driverless electric race car", "Localisation, trajectory tracking and control algorithms under racing conditions", "The team's first entry in the Driverless category, laying the foundations of its autonomous driving software"] }
+      { k: "bcn", role: "Chief of Estimation & Control", area: "Autonomous vehicles", org: "BCN e-Motorsport (Formula Student Driverless)", place: "Barcelona, Spain", period: "09/2018 – 08/2019", platform: "Driverless electric race car", bullets: ["Led the estimation and control area of a driverless electric race car, in a cross-functional team of 7", "Hands-on and organisational experience, close to how a company works, that proved very useful in my later jobs"], formLink: "See the full project under Education" }
     ],
     videoLabel: "Watch the demo video",
     eduShort: "Education", eduTitle: "Education",
     edu: [
       { y: "2022 – 2025", t: "Ph.D. in Automatic Control, Robotics and Vision", w: "UPC-CSIC, Barcelona", p: "Thesis: <em>Functional Safety for Highly Automated Vehicles</em>. Excellent Cum Laude, International and Industrial mentions. Research stays at TUM (Munich and Heilbronn)." },
       { y: "2018 – 2021", t: "MSc in Industrial Engineering · Automation and Robotics", w: "UPC-ETSEIB, Barcelona", p: "International exchange at EPFL (Lausanne, Switzerland)." },
-      { y: "2013 – 2018", t: "BSc in Industrial Engineering", w: "UPC-ETSEIB, Barcelona", p: "International exchange at KIT (Karlsruhe, Germany)." }
+      { y: "2013 – 2018", t: "BSc in Industrial Technology Engineering", w: "UPC-ETSEIB, Barcelona", p: "International exchange at KIT (Karlsruhe, Germany)." }
     ],
     skillsShort: "Skills", skillsTitle: "Technical skills",
     skills: [

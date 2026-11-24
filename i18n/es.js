@@ -2,7 +2,7 @@ window.I18N = window.I18N || {};
 window.I18N.es = {
   meta: { title: "Carlos Conejo Barceló · Automática, control y robótica" },
   ui: {
-    nav: { inicio: "Inicio", docencia: "Docencia", investigacion: "Investigación", profesional: "Profesional" },
+    nav: { inicio: "Inicio", docencia: "Docencia", investigacion: "Investigación", profesional: "Profesional", formacion: "Formación" },
     lang: "Idioma", close: "Cerrar", hover: "Pasa el cursor o toca los puntos.", all: "Todo",
     figure: "Figura", more: "Ver más", less: "Ver menos", footer: "Carlos Conejo Barceló · Departamento ESAII · Universitat Politècnica de Catalunya",
     areas: { docencia: "Docencia", investigacion: "Investigación", profesional: "Profesional", formacion: "Formación" },
@@ -26,6 +26,9 @@ window.I18N.es = {
     "fs-driverless-run": "El monoplaza en pista durante la competición Formula Student (2019).",
     "ifac2026-backdrop": "En el 23.º IFAC World Congress (Busan, 2026).",
     "pulsar-booth-carlos": "En el stand de PULSAR HRI, en la exposición del IFAC World Congress (Busan, 2026).",
+    "grado-proyecto-robot": "Proyecto I: mecanismo accionado por servomotores y controlado con Arduino.",
+    "grado-tfg": "TFG: dos robots circulando en convoy por el circuito del laboratorio.",
+    "master-fs-vsv": "Formula Student: demostración del vehículo en modo autónomo, con la nube de puntos del LiDAR y los conos detectados.",
     "iv2026-poster": "Póster en el IEEE Intelligent Vehicles Symposium 2026 (Detroit).",
     "ifac2026-title": "Ponencia oral en el 23.º IFAC World Congress (Busan, 2026).",
     "ifac2026-talk": "Durante la presentación en el IFAC World Congress (Busan, 2026)."
@@ -40,11 +43,12 @@ window.I18N.es = {
       "Soy ingeniero industrial especializado en robótica y doctor en Automática, Robótica y Visión por la UPC. Hice el doctorado industrial con Renault Group y el Institut de Robòtica i Informàtica Industrial (CSIC-UPC), y obtuve la calificación de Excelente Cum Laude con mención internacional e industrial.",
       "Desde septiembre de 2026 soy profesor lector en la ESEIAAT. Mi trabajo une tres ámbitos que se alimentan entre sí: la <strong>docencia</strong> en control y robótica, la <strong>investigación</strong> en seguridad de sistemas autónomos y la <strong>experiencia profesional</strong> llevando algoritmos a plataformas físicas reales."
     ],
-    branchesTitle: "Tres ámbitos, un mismo hilo",
+    branchesTitle: "Cuatro ámbitos, un mismo hilo",
     branches: {
-      docencia: { title: "Docencia", desc: "Control automático y robótica en la UPC desde 2022, con un enfoque experimental, participativo y basado en el feedback.", stats: [["4", "asignaturas"], ["5", "cursos académicos"], ["4,5–4,9", "en «m'ajuda a aprendre» (sobre 5)"]] },
+      docencia: { title: "Docencia", desc: "Control automático y robótica en la UPC desde 2022, con un enfoque experimental, participativo y basado en el feedback.", stats: [["4", "asignaturas"], ["5", "cursos académicos"], ["4,5–4,9", "valoración del alumnado (sobre 5)"]] },
       investigacion: { title: "Investigación", desc: "Seguridad funcional, diagnóstico de fallos, análisis de alcanzabilidad y control predictivo para sistemas autónomos.", stats: [["9", "publicaciones seleccionadas"], ["2", "patentes"], ["5", "proyectos"]] },
-      profesional: { title: "Profesional", desc: "Más de cinco años de I+D en robótica y vehículos autónomos, en centros de investigación y en la industria.", stats: [["5+", "años de I+D"], ["5", "plataformas reales"], ["6", "centros y empresas"]] }
+      profesional: { title: "Profesional", desc: "Más de cinco años de I+D en robótica y vehículos autónomos, en centros de investigación y en la industria.", stats: [["5+", "años de I+D"], ["5", "plataformas reales"], ["6", "centros y empresas"]] },
+      formacion: { title: "Formación", desc: "Grado y máster en Ingeniería Industrial y doctorado en Automática, Robótica y Visión, siempre con proyectos sobre sistemas reales.", stats: [["3", "titulaciones"], ["2", "intercambios"], ["5", "proyectos"]] }
     },
     tlTitle: "Trayectoria",
     tlNote: "Filtra por ámbito:",
@@ -57,8 +61,8 @@ window.I18N.es = {
       { y: "2021–22", b: ["profesional", "investigacion"], t: "Motion Control Engineer", w: "Computer Vision Center (CVC-UAB) · Barcelona" },
       { y: "2020–21", b: ["profesional", "investigacion"], t: "Research Assistant · robótica móvil para rehabilitación", w: "EPFL-VITA & NeuroRestore (CHUV) · Lausana" },
       { y: "2018–21", b: ["formacion"], t: "Máster en Ingeniería Industrial · Automática y Robótica", w: "UPC-ETSEIB · intercambio en la EPFL (Lausana)" },
-      { y: "2018–19", b: ["profesional"], t: "Chief of Estimation & Control", w: "BCN e-Motorsport · Formula Student Driverless" },
-      { y: "2013–18", b: ["formacion"], t: "Grado en Ingeniería Industrial", w: "UPC-ETSEIB · intercambio en el KIT (Karlsruhe)" }
+      { y: "2018–19", b: ["formacion", "profesional"], t: "Chief of Estimation & Control", w: "BCN e-Motorsport · Formula Student Driverless" },
+      { y: "2013–18", b: ["formacion"], t: "Grado en Ingeniería en Tecnologías Industriales", w: "UPC-ETSEIB · intercambio en el KIT (Karlsruhe)" }
     ],
     galleryTitle: "En imágenes",
     galleryNote: "Pulsa cualquier foto o vídeo para ampliarlo.",
@@ -253,6 +257,29 @@ window.I18N.es = {
   },
 
   /* ---------------- PROFESIONAL ---------------- */
+  study: {
+    eyebrow: "Formación",
+    title: "Aprender construyendo",
+    lead: "Del grado al doctorado, cada etapa de mi formación ha girado en torno a proyectos en los que la teoría de control tenía que funcionar en un sistema real.",
+    stats: [["3", "titulaciones en la UPC"], ["2", "intercambios internacionales (KIT y EPFL)"], ["5", "proyectos destacados de grado y máster"], ["Excelente", "calificación del TFG"]],
+    degShort: "Titulaciones", degTitle: "Titulaciones",
+    gradoShort: "Grado", gradoTitle: "Grado en Ingeniería en Tecnologías Industriales · ETSEIB",
+    gradoIntro: "Tres proyectos que marcan una progresión: de una primera introducción a la electrónica a un sistema de control repartido entre varios robots.",
+    masterShort: "Máster", masterTitle: "Máster en Ingeniería Industrial · ETSEIB y EPFL",
+    masterIntro: "En el máster di el salto a los vehículos autónomos: primero en competición, con el Formula Student Driverless, y después en investigación, con el TFM en la EPFL.",
+    phdShort: "Doctorado", phdTitle: "Doctorado en Automática, Robótica y Visión",
+    phdP: "El doctorado industrial con Renault Group y el IRI (UPC-CSIC) cerró este recorrido: los métodos de control y seguridad se validaron sobre prototipos reales de vehículo autónomo. Excelente Cum Laude, con mención internacional e industrial.",
+    phdLink: "Ver la tesis y las publicaciones en Investigación",
+    labels: { director: "Dirección", team: "Equipo", grade: "Calificación", read: "Leer el documento", blog: "Blog del proyecto", memoria: "Memoria del Loclock (PDF)", video: "Ver vídeo en YouTube" },
+    projects: {
+      p1: { tag: "Proyecto I · 2.º curso", title: "Mecanismo con servomotores", p: "Primer contacto con la electrónica y la programación de microcontroladores: un mecanismo accionado por servomotores, construido y programado con Arduino.", bullets: ["Introducción a la electrónica mediante Arduino", "Montaje mecánico, cableado y programación del control de los servos"] },
+      p2: { tag: "Proyecto II · 3.er curso", title: "Loclock: un reloj para residencias de mayores", p: "Prototipo de reloj para residentes de residencias de mayores: recuerda tareas diarias, como las comidas o la ducha, e incluye un botón de emergencia que avisa al personal de enfermería.", bullets: ["Arduino UNO, Bluetooth con una app Android, reloj de tiempo real, pantalla LCD y mensajes de voz", "Localización del residente por habitaciones con radiofrecuencia y ultrasonidos", "El equipo documentó también 16 proyectos guiados del Arduino Starter Kit en un blog"], team: "Júlia Bayascas, Sofía Cámara, Arnau Colom, Carlos Conejo y Aina Galofré", director: "Cecilio Angulo" },
+      tfg: { tag: "Trabajo Final de Grado · 2017", title: "Adaptive Cruise Control, an scaled model: platooning using two-wheeled robots", p: "Recreación a escala de la circulación en convoy (platooning) de vehículos que comparten trayectoria, para estudiar el control de crucero adaptativo (ACC) y evitar colisiones.", bullets: ["Construcción de tres robots de dos ruedas más, hasta tener cuatro vehículos idénticos", "Caracterización de sensores y motores y unificación del código de control (STM32F4)", "Controlador PI de la distancia entre vehículos y red Wi-Fi (ESP8266) entre robots y ordenador", "Validación en circuito cerrado con pruebas de frenada y de circulación tras un vehículo líder"], director: "Arnau Dòria Cerezo y Víctor Repecho del Corral", grade: "Excelente" },
+      fs: { tag: "Formula Student Driverless · 2018–2019", title: "BCN e-Motorsport: Chief of Estimation & Control", p: "Dirigí el área de estimación y control del monoplaza eléctrico sin conductor del equipo, en su primera participación en la categoría Driverless.", bullets: ["Equipo multidisciplinar de 7 personas desarrollando sistemas basados en ROS", "Algoritmos de localización, seguimiento de trayectorias y control en condiciones de carrera", "El vídeo principal demuestra el vehículo funcionando en modo autónomo", "Una experiencia práctica y de organización de equipo que me preparó para mis trabajos posteriores"] },
+      tfm: { tag: "Trabajo Final de Máster · EPFL · 2021", title: "Design and Implementation of a Pipeline for Fully Autonomous Driving Systems", p: "Pipeline modular y en tiempo real para robots móviles, desarrollado en el laboratorio VITA de la EPFL. Se organiza en cinco bloques (estimación de estado, percepción, predicción, planificación y control), cada uno con un algoritmo intercambiable.", bullets: ["ROS sobre un robot Segway Loomo, conectado por red inalámbrica a un ordenador externo", "Predicción de trayectorias de personas con TrajNet++, planificación RRT* que tiene en cuenta la predicción y control MPC", "Con una persona en movimiento constante, las colisiones bajaron del 45 % sin predictor al 5 % con TrajNet++", "Aplicación en neurociencia, recogida en un artículo con Yuejiang Liu, Mohammadhossein Bahari y Alexandre Alahi: el robot sigue las piernas de un paciente parapléjico (cadera, rodilla y tobillo, con OpenPifPaf) para alimentar el algoritmo de estimulación que le ayuda a caminar con andador", "Detección en un servidor con GPU a hasta 40 Hz y control PID de la cámara del robot para no perder al paciente, con pruebas en la EPFL"] }
+    }
+  },
+
   prof: {
     eyebrow: "Experiencia profesional",
     title: "De los algoritmos a las plataformas reales",
@@ -266,14 +293,14 @@ window.I18N.es = {
       { k: "eebe", role: "Profesor asociado", area: "Control automático", org: "UPC · EEBE", place: "Barcelona, España", period: "09/2022 – 11/2025", platform: "", bullets: ["Prácticas de laboratorio de Regulació Automàtica y Tècniques de Control con MATLAB, Simulink y controladores industriales reales", "Supervisión y evaluación de trabajos sobre ajuste de PID, identificación de sistemas y control realimentado, en simulación y en hardware"] },
       { k: "cvc", role: "Motion Control Engineer", area: "Vehículos autónomos", org: "Computer Vision Center (CVC-UAB)", place: "Barcelona, España", period: "05/2021 – 09/2022", platform: "Prototipo autónomo Volkswagen e-Golf", bullets: ["Planificación de trayectorias en tiempo real y estimación de estado con EKF en ROS (Python)", "Controlador predictivo dinámico (MPC) para el seguimiento de trayectorias teniendo en cuenta obstáculos", "Despliegue y ajuste del control de movimiento en un prototipo autónomo Volkswagen e-Golf y en el simulador CARLA", "Integración con los equipos de percepción y localización en el vehículo, en el Pirineo"] },
       { k: "epfl", role: "Research Assistant", area: "Robótica móvil para rehabilitación", org: "EPFL-VITA & NeuroRestore (CHUV)", place: "Lausana, Suiza", period: "09/2020 – 05/2021", platform: "Asistente robótico basado en Segway Loomo", bullets: ["Algoritmos de control y seguimiento en tiempo real en ROS (C++/Python) para un asistente robótico basado en Segway Loomo", "Integración de módulos de percepción para seguir de forma autónoma a pacientes parapléjicos durante las sesiones de terapia", "Colaboración con neurocientíficos para adaptar las soluciones robóticas al flujo de trabajo de la rehabilitación"] },
-      { k: "bcn", role: "Chief of Estimation & Control", area: "Vehículos autónomos", org: "BCN e-Motorsport (Formula Student Driverless)", place: "Barcelona, España", period: "09/2018 – 08/2019", platform: "Monoplaza eléctrico de competición sin conductor", bullets: ["Dirección de un equipo multidisciplinar de 7 personas desarrollando sistemas basados en ROS para un vehículo eléctrico de competición sin conductor", "Algoritmos de localización, seguimiento de trayectorias y control en condiciones de carrera", "Primera participación del equipo en la categoría Driverless, sentando las bases de su software de conducción autónoma"] }
+      { k: "bcn", role: "Chief of Estimation & Control", area: "Vehículos autónomos", org: "BCN e-Motorsport (Formula Student Driverless)", place: "Barcelona, España", period: "09/2018 – 08/2019", platform: "Monoplaza eléctrico de competición sin conductor", bullets: ["Dirección del área de estimación y control de un monoplaza eléctrico sin conductor, en un equipo multidisciplinar de 7 personas", "Una experiencia práctica y de organización, cercana al funcionamiento de una empresa, que me fue muy útil en mis trabajos posteriores"], formLink: "Ver el proyecto completo en Formación" }
     ],
     videoLabel: "Ver vídeo de demostración",
     eduShort: "Formación", eduTitle: "Formación académica",
     edu: [
       { y: "2022 – 2025", t: "Doctorado en Automática, Robótica y Visión", w: "UPC-CSIC, Barcelona", p: "Tesis: <em>Functional Safety for Highly Automated Vehicles</em>. Excelente Cum Laude, mención internacional e industrial. Estancias en la TUM (Múnich y Heilbronn)." },
       { y: "2018 – 2021", t: "Máster en Ingeniería Industrial · especialidad en Automática y Robótica", w: "UPC-ETSEIB, Barcelona", p: "Intercambio internacional en la EPFL (Lausana, Suiza)." },
-      { y: "2013 – 2018", t: "Grado en Ingeniería Industrial", w: "UPC-ETSEIB, Barcelona", p: "Intercambio internacional en el KIT (Karlsruhe, Alemania)." }
+      { y: "2013 – 2018", t: "Grado en Ingeniería en Tecnologías Industriales", w: "UPC-ETSEIB, Barcelona", p: "Intercambio internacional en el KIT (Karlsruhe, Alemania)." }
     ],
     skillsShort: "Competencias", skillsTitle: "Competencias técnicas",
     skills: [

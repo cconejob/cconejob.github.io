@@ -21,6 +21,7 @@
   --serif:"Fraunces",Georgia,serif; --sans:"Inter",system-ui,-apple-system,sans-serif;
 }
 body[data-view=investigacion]{--accent:var(--c-inv);--accent-2:#818cf8;--accent-soft:var(--c-inv-soft)}
+body[data-view=formacion]{--accent:var(--c-for);--accent-2:#f472b6;--accent-soft:var(--c-for-soft)}
 body[data-view=profesional]{--accent:var(--c-pro);--accent-2:#f59e0b;--accent-soft:var(--c-pro-soft)}
 *{box-sizing:border-box}
 html{scroll-padding-top:120px}
@@ -109,7 +110,7 @@ section.s.alt{background:var(--paper)}
 .note{font-size:.84rem;color:var(--muted);margin-top:8px}
 
 /* home branches */
-.branches{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}
+.branches{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:28px}
 .branch{display:flex;flex-direction:column;text-decoration:none;color:var(--ink);background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:26px;box-shadow:var(--shadow);transition:transform .25s,box-shadow .25s;position:relative;overflow:hidden}
 .branch:before{content:"";position:absolute;left:0;top:0;right:0;height:5px;background:var(--bc)}
 .branch:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(20,33,61,.12)}
@@ -117,10 +118,11 @@ section.s.alt{background:var(--paper)}
 .branch h3{font-size:1.5rem;margin-bottom:8px}
 .branch p{color:var(--ink-2);font-size:.96rem;flex:1}
 .branch .bst{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:10px 0 16px}
-.branch .bst b{display:block;font-family:var(--serif);font-size:1.35rem;color:var(--bc);line-height:1.2}
+.branch .bst b{display:block;white-space:nowrap;font-family:var(--serif);font-size:1.25rem;color:var(--bc);line-height:1.2}
 .branch .bst span{font-size:.74rem;color:var(--muted);line-height:1.3;display:block}
 .branch .go{font-weight:600;font-size:.9rem;color:var(--bc)}
-@media (max-width:860px){.branches{grid-template-columns:1fr}}
+@media (max-width:1000px){.branches{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:620px){.branches{grid-template-columns:1fr}}
 .tlfilter{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0 26px;align-items:center}
 .tlfilter span{font-size:.86rem;color:var(--muted);margin-right:4px}
 .tlfilter button{appearance:none;border:1px solid var(--line);background:var(--paper);font:inherit;font-size:.84rem;padding:5px 13px;border-radius:999px;cursor:pointer;color:var(--ink-2);display:flex;align-items:center;gap:6px}
@@ -353,6 +355,21 @@ details.pl .body p{font-size:.95rem;color:var(--ink-2);margin:0}
 .hphoto figcaption{font-size:.8rem;color:var(--muted);margin-top:8px;text-align:center}
 .hphoto:before{content:"";position:absolute;inset:16px -16px 26px 16px;border-radius:22px;background:var(--accent-soft);z-index:-1}
 @media (max-width:860px){.hphoto.tall{max-width:260px;justify-self:start}.hphoto.wide{max-width:520px;justify-self:start}}
+.studycard{display:grid;grid-template-columns:1.05fr 1fr;margin-top:22px}
+.studycard.nomedia{grid-template-columns:1fr}
+.studycard .mediacol{background:#0e1424;display:flex;flex-direction:column}
+.studycard .mediacol .stage{flex:1;min-height:260px}
+.studycard .mediacol .thumbs{padding:10px 12px}
+.studycard .mediacol .cap{color:#c8d0de;font-size:.82rem;margin:0;padding:0 14px 12px}
+.studycard .txt{padding:22px 24px}
+.studycard .txt h3{font-size:1.15rem;line-height:1.35;margin:4px 0 8px}
+.studycard .txt ul{margin:10px 0 0;padding-left:20px;color:var(--ink-2);font-size:.93rem}
+.studycard .txt ul li{margin-bottom:4px}
+.studycard dl{display:grid;grid-template-columns:max-content 1fr;gap:4px 12px;margin:12px 0 0;font-size:.86rem}
+.studycard dt{color:var(--muted)}.studycard dd{margin:0}
+.studycard .links{display:flex;flex-wrap:wrap;gap:8px 16px;margin-top:14px;font-size:.88rem;font-weight:600}
+.studycard .links a{text-decoration:none}
+@media (max-width:860px){.studycard{grid-template-columns:1fr}}
 #lb video{max-width:min(1400px,96vw);max-height:84vh;border-radius:8px;background:#000}
 footer{padding:40px 0;text-align:center;font-size:.85rem;color:var(--muted);border-top:1px solid var(--line)}
 #lb{position:fixed;inset:0;background:rgba(10,16,30,.88);display:none;align-items:center;justify-content:center;z-index:100;padding:24px;cursor:zoom-out}
@@ -384,11 +401,11 @@ footer{padding:40px 0;text-align:center;font-size:.85rem;color:var(--muted);bord
 <script src="i18n/ca.js"></script>
 <script>
 (function(){
-var D=window.DATA, VIEWS=['inicio','docencia','investigacion','profesional'];
+var D=window.DATA, VIEWS=['inicio','docencia','investigacion','profesional','formacion'];
 var COL={docencia:'var(--c-doc)',investigacion:'var(--c-inv)',profesional:'var(--c-pro)',formacion:'var(--c-for)'};
 var SOFT={docencia:'var(--c-doc-soft)',investigacion:'var(--c-inv-soft)',profesional:'var(--c-pro-soft)',formacion:'var(--c-for-soft)'};
 var AREAS=['docencia','investigacion','profesional','formacion'];
-var ICON={docencia:'🎓',investigacion:'🔬',profesional:'🤖'};
+var ICON={docencia:'🎓',investigacion:'🔬',profesional:'🤖',formacion:'📚'};
 var lang='es', view='inicio', T, timers=[];
 try{var sl=localStorage.getItem('cc-lang'); if(sl&&window.I18N[sl]) lang=sl;}catch(e){}
 
@@ -410,7 +427,7 @@ function vHome(){
   h+='<header class="hero"><div class="wrap"><div class="grid"><div>'+
     '<div class="eyebrow">'+H.eyebrow+'</div><h1>Carlos Conejo Barceló</h1><p class="role">'+H.role+'</p><p class="lead">'+H.tagline+'</p></div>'+
     '<div class="photo"><img src="img/foto.jpg" alt="Carlos Conejo Barceló"></div></div></div></header>';
-  var br=['docencia','investigacion','profesional'].map(function(k){var b=H.branches[k];
+  var br=['docencia','investigacion','profesional','formacion'].map(function(k){var b=H.branches[k];
     return '<a class="branch reveal" href="#'+k+'" style="--bc:'+COL[k]+';--bs:'+SOFT[k]+'"><div class="ic">'+ICON[k]+'</div><h3>'+b.title+'</h3><p>'+b.desc+'</p>'+
       '<div class="bst">'+b.stats.map(function(s){return '<div><b>'+s[0]+'</b><span>'+s[1]+'</span></div>'}).join('')+'</div><span class="go">'+T.ui.explore+' →</span></a>'}).join('');
   h+=sec('ambitos',H.branchesTitle,'<div class="reveal" style="max-width:820px">'+H.bio.map(function(p){return '<p class="intro" style="max-width:none">'+p+'</p>'}).join('')+'</div><div class="s-head reveal" style="margin:40px 0 0"><h2>'+H.branchesTitle+'</h2></div><div class="branches">'+br+'</div>',true);
@@ -515,14 +532,29 @@ function vProf(){
   h+=sec('p-exp',P.expShort,'<div class="s-head reveal"><h2>'+P.expTitle+'</h2></div><div class="xp">'+P.exp.map(function(x){var pr=x.period.split(' – ');
     return '<div class="xpi reveal"><div class="when">'+x.period+'<small>'+x.place+'</small></div><div class="xpc">'+atags((D.exp[x.k]||{}).areas||[])+'<h3 style="margin-top:8px">'+x.role+'</h3><div class="note" style="margin:0 0 2px">'+x.area+'</div><div class="org">'+x.org+'</div>'+
     '<ul class="'+(x.bullets.length>2?'hide':'')+'">'+x.bullets.map(function(b){return '<li>'+b+'</li>'}).join('')+'</ul>'+(x.bullets.length>2?'<button class="more">'+T.ui.more+' ↓</button>':'')+
-    (x.platform?'<div><span class="plat">⚙ '+x.platform+'</span></div>':'')+((D.exp[x.k]||{}).video?'<p style="margin:10px 0 0;font-size:.9rem"><a href="'+D.exp[x.k].video+'" target="_blank" rel="noopener">▶ '+P.videoLabel+' ↗</a></p>':'')+'</div></div>'}).join('')+'</div>',true);
+    (x.platform?'<div><span class="plat">⚙ '+x.platform+'</span></div>':'')+(x.formLink?'<p style="margin:10px 0 0;font-size:.9rem"><a href="#formacion" style="font-weight:600">'+x.formLink+' →</a></p>':'')+((D.exp[x.k]||{}).video?'<p style="margin:10px 0 0;font-size:.9rem"><a href="'+D.exp[x.k].video+'" target="_blank" rel="noopener">▶ '+P.videoLabel+' ↗</a></p>':'')+'</div></div>'}).join('')+'</div>',true);
   var plats=P.exp.filter(function(x){return D.exp[x.k]&&D.exp[x.k].media.length});
   h+=sec('p-plat',P.platformsShort,'<div class="s-head reveal"><h2>'+P.platformsTitle+'</h2></div><p class="note reveal" style="margin-top:-12px">'+P.platformsNote+'</p><div class="platg">'+plats.map(function(x){var ms=D.exp[x.k].media;
     return '<div class="platcard reveal" data-k="'+x.k+'"><div class="stage" data-m="'+ms[0]+'"></div>'+(ms.length>1?'<div class="thumbs">'+ms.map(function(id,i){return '<button aria-pressed="'+(i==0)+'" data-m="'+id+'" aria-label="'+((T.media[id]||'').replace(/"/g,'&quot;'))+'"><img src="media/'+id+'.jpg" alt="" loading="lazy"></button>'}).join('')+'</div>':'')+
     '<div class="info"><b>'+(x.platform||x.org)+'</b><div class="org">'+x.org+' · '+x.period+'</div><p class="cap"></p>'+(D.exp[x.k].video?'<p style="margin-top:8px"><a href="'+D.exp[x.k].video+'" target="_blank" rel="noopener" style="font-weight:600">▶ '+P.videoLabel+' (YouTube) ↗</a></p>':'')+'</div></div>'}).join('')+'</div>',false);
-  h+=sec('p-edu',P.eduShort,'<div class="s-head reveal"><h2>'+P.eduTitle+'</h2></div><div class="timeline reveal" style="margin-top:20px">'+P.edu.map(function(e){return '<div class="tl"><div class="when">'+e.y+' · '+e.w+'</div><h3>'+e.t+'</h3><p>'+e.p+'</p></div>'}).join('')+'</div>',true);
   h+=sec('p-skills',P.skillsShort,'<div class="split" style="margin-top:0"><div class="reveal"><h2 style="margin-bottom:18px">'+P.skillsTitle+'</h2>'+P.skills.map(function(s){return '<div style="margin-bottom:18px"><div class="note" style="margin:0;font-weight:600;color:var(--ink-2)">'+s.g+'</div><div class="chips">'+s.items.map(function(i){return '<span class="chip">'+i+'</span>'}).join('')+'</div></div>'}).join('')+'</div>'+
     '<div class="reveal"><h2 style="margin-bottom:6px">'+P.langTitle+'</h2><div class="langs-list">'+P.langs.map(function(l){var d='';for(var i=1;i<=5;i++)d+='<i class="'+(i<=l[2]?'f':'')+'"></i>';return '<div class="lg"><span>'+l[0]+'</span><div class="dots">'+d+'</div><b>'+l[1]+'</b></div>'}).join('')+'</div></div></div>',false);
+  return h;
+}
+
+/* ---------- EDUCATION ---------- */
+function studyCard(k){var S=T.study,P=S.projects[k],d=D.study[k]||{media:[],links:[]},ms=d.media||[];
+  var media=ms.length?'<div class="mediacol"><div class="stage" data-m="'+ms[0]+'"></div>'+(ms.length>1?'<div class="thumbs">'+ms.map(function(id,i){return '<button aria-pressed="'+(i==0)+'" data-m="'+id+'" aria-label="'+((T.media[id]||'').replace(/"/g,'&quot;'))+'"><img src="media/'+id+'.jpg" alt="" loading="lazy"></button>'}).join('')+'</div>':'<div style="height:10px"></div>')+'<p class="cap"></p></div>':'';
+  var dl='';if(P.director)dl+='<dt>'+S.labels.director+'</dt><dd>'+P.director+'</dd>';if(P.team)dl+='<dt>'+S.labels.team+'</dt><dd>'+P.team+'</dd>';if(P.grade)dl+='<dt>'+S.labels.grade+'</dt><dd><b>'+P.grade+'</b></dd>';
+  var links=(d.links||[]).map(function(l){return '<a href="'+l[1]+'" target="_blank" rel="noopener">'+S.labels[l[0]]+' ↗</a>'}).join('');
+  return '<article class="platcard studycard reveal'+(ms.length?'':' nomedia')+'">'+media+'<div class="txt"><span class="tag">'+P.tag+'</span><h3>'+P.title+'</h3><p class="m" style="margin:0">'+P.p+'</p><ul>'+P.bullets.map(function(b){return '<li>'+b+'</li>'}).join('')+'</ul>'+(dl?'<dl>'+dl+'</dl>':'')+(links?'<div class="links">'+links+'</div>':'')+'</div></article>'}
+function vStudy(){
+  var S=T.study,h='';
+  h+='<header class="hero"><div class="wrap"><div class="grid"><div><div class="eyebrow">'+S.eyebrow+'</div><h1>'+S.title+'</h1><p class="lead" style="margin-top:22px">'+S.lead+'</p></div>'+heroPhoto('fs-driverless-2019','tall')+'</div>'+stats(S.stats)+'</div></header>';
+  h+=sec('f-titulaciones',S.degShort,'<div class="s-head reveal"><h2>'+S.degTitle+'</h2></div><div class="timeline reveal" style="margin-top:20px">'+T.prof.edu.map(function(e){return '<div class="tl"><div class="when">'+e.y+' · '+e.w+'</div><h3>'+e.t+'</h3><p>'+e.p+'</p></div>'}).join('')+'</div>',true);
+  h+=sec('f-grado',S.gradoShort,'<div class="s-head reveal"><h2>'+S.gradoTitle+'</h2></div><p class="intro reveal">'+S.gradoIntro+'</p>'+['p1','p2','tfg'].map(studyCard).join(''),false);
+  h+=sec('f-master',S.masterShort,'<div class="s-head reveal"><h2>'+S.masterTitle+'</h2></div><p class="intro reveal">'+S.masterIntro+'</p>'+['fs','tfm'].map(studyCard).join(''),true);
+  h+=sec('f-doctorado',S.phdShort,'<div class="s-head reveal"><h2>'+S.phdTitle+'</h2></div><p class="intro reveal">'+S.phdP+'</p><p class="reveal"><a href="#investigacion" style="font-weight:600">'+S.phdLink+' →</a></p>',false);
   return h;
 }
 
@@ -580,7 +612,7 @@ function bind(){
   app.querySelectorAll('.hphoto').forEach(function(f){f.addEventListener('click',function(){var id=f.dataset.m;openLB('media/'+id+'.jpg',false,T.media[id]||'')})});
   app.querySelectorAll('.mfig .mm').forEach(function(mm){mm.addEventListener('click',function(){var id=mm.parentNode.dataset.m;openLB('media/'+id+(D.media[id].v?'.mp4':'.jpg'),!!D.media[id].v,T.media[id]||'')})});
   // platform cards
-  app.querySelectorAll('.platcard').forEach(function(pc){var st=pc.querySelector('.stage'),cap=pc.querySelector('.cap');
+  app.querySelectorAll('.platcard').forEach(function(pc){var st=pc.querySelector('.stage'),cap=pc.querySelector('.cap');if(!st)return;
     var show=function(id){st.dataset.m=id;var m=D.media[id];st.innerHTML=m.v?'<video src="media/'+id+'.mp4" poster="media/'+id+'.jpg" muted loop playsinline autoplay preload="metadata"></video>':'<img src="media/'+id+'.jpg" alt="'+(T.media[id]||'').replace(/"/g,'&quot;')+'">';cap.textContent=T.media[id]||'';
       pc.querySelectorAll('.thumbs button').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.m===id)})};
     pc.querySelectorAll('.thumbs button').forEach(function(b){b.addEventListener('click',function(){show(b.dataset.m)})});
@@ -601,7 +633,7 @@ function render(keepScroll){
   document.getElementById('views').innerHTML=VIEWS.map(function(v){return '<a href="#'+v+'" class="'+(v===view?'on':'')+'">'+(COL[v]?'<i style="background:'+COL[v]+'"></i>':'')+T.ui.nav[v]+'</a>'}).join('');
   document.querySelectorAll('#langs button').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.l===lang)});
   var y=window.scrollY;
-  document.getElementById('app').innerHTML=view==='docencia'?vTeach():view==='investigacion'?vResearch():view==='profesional'?vProf():vHome();
+  document.getElementById('app').innerHTML=view==='docencia'?vTeach():view==='investigacion'?vResearch():view==='profesional'?vProf():view==='formacion'?vStudy():vHome();
   document.getElementById('foot').innerHTML=T.ui.footer;
   subSecs=[].slice.call(document.querySelectorAll('#app section[data-sub]'));
   var sn=document.getElementById('subnav');sn.classList.toggle('on',view!=='inicio');
